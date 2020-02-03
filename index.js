@@ -29,3 +29,62 @@ const meInfo = {
 
 console.log(meInfo.Age);
 
+const title = document.getElementById("title");
+title.innerHTML = "Hi! I changed html by JS";
+
+const contents = document.querySelector("#contents");
+contents.innerHTML = "Hi! I changed this one too again";
+
+
+function handleResize(){
+    console.log("I have been resized");
+
+}
+
+window.addEventListener("resize",handleResize);
+
+/*
+function handleClick() {
+
+    const currentColor = contents.style.color;
+
+    if (currentColor === BASE_COLOR){
+        contents.style.color = OTHER_COLOR;
+    } else{
+        contents.style.color = BASE_COLOR;
+    }
+}
+
+
+const BASE_COLOR = "black";
+const OTHER_COLOR = "blue";
+
+function init(){
+    contents.style.color = BASE_COLOR;
+    contents.addEventListener("click",handleClick)
+}
+
+init();
+*/
+
+const CLICKED_CLASS = "clicked";
+const NOTCLICKED_CLASS = "notClicked";
+
+function handleClick(){
+    const hasClass = contents.classList.contains(CLICKED_CLASS);
+    const currentClass = contents.className;
+    if(!hasClass){
+        contents.classList.add(CLICKED_CLASS);
+    } else {
+        contents.classList.remove(CLICKED_CLASS);
+        contents.classList.add(NOTCLICKED_CLASS);
+    }
+}
+
+//CAN BE EASILY REPLACED WITH TOGGLE METHOD
+
+function init(){
+      contents.addEventListener("click",handleClick)
+}
+
+init();
