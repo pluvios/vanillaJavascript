@@ -1,9 +1,9 @@
 
 const clockContainer = document.querySelector(".js-clock"),
-      clockTitle = clockContainer.querySelector("h1");
+      clockTitle = clockContainer.querySelector("span");
 
       const dateContainer = document.querySelector(".js-date"),
-      dateTitle = dateContainer.querySelector("h1");
+      dateTitle = dateContainer.querySelector("span");
 
 
 function getTime(){
@@ -29,12 +29,12 @@ function getDate(){
     const days = date.getDay();
     const daysList = ["monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday", "Saturday", "Sunday" ];
 
-    dateTitle.innerText = `${years}-${months}-${dates} ${daysList[days-1]}`;
+    dateTitle.innerText = `${years}-${months+1 < 10 ? `0${months+1}` : months+1}-${dates < 10 ? `0${dates}` : dates} ${daysList[days-1]}`;
 }
 
 function initDate(){
     getDate();
 }
 initDate();
-setInterval(initDate,3600000);
+setInterval(initDate,1000000);
 
