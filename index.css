@@ -10,7 +10,7 @@ html,body{
     display:flex; 
     flex-direction:column; 
     justify-content:center;
-    z-index: -10;
+    z-index: -11;
 }
 
 .js-clock{
@@ -25,6 +25,7 @@ html,body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
 }
 
 .js-title2{
@@ -36,6 +37,7 @@ html,body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
 }
 
 
@@ -44,9 +46,75 @@ html,body{
 }
 
 .showing {
-    padding-top: 80px;
+    padding-top: 60px;
     font-weight: 700;
     font-size: 50px;
+    color: white;
+    font-family: 'Montserrat';
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.js-toDoForm {
+    padding-top: 60px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.js-toDoForm input{
+    outline: none;
+    padding: 5px;
+    height: 15px;
+    width: 30%;
+}
+
+.js-toDoList {
+    padding-top: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.js-toDoList li{
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+
+}
+
+.js-toDoList span{
+    margin-left: 7px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat';
+
+}
+
+.js-toDoList button{
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    opacity: 80%;
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+}
+
+
+.js-weather {
+    padding-top: 0px;
+    font-weight: 600;
+    font-size: 30px;
     color: white;
     font-family: 'Montserrat';
     display:flex;
@@ -65,7 +133,7 @@ html,body{
 
 .bgImage{
     position: absolute;
-    z-index: -9;
+    z-index: -10;
     top: 0;
     left: 0;
     bottom: 0;
@@ -74,4 +142,5 @@ html,body{
     height: 100%;
     animation: fadeIn .5s;
 }
+
 
