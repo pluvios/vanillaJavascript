@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800,900&display=swap');
+@import "reset.css";
+
+
+
+
+* {
+    box-sizing: border-box;
+}
 
 html,body{
     background-color: gray;
@@ -13,9 +21,6 @@ html,body{
     z-index: -11;
 }
 
-.js-clock{
-    
-}
 
 .js-title{
     font-family: 'Montserrat';   
@@ -68,8 +73,8 @@ html,body{
 
 .js-toDoForm input{
     outline: none;
-    padding: 5px;
-    height: 15px;
+    padding : 8px 5px 8px 5px;
+    height: 3vmin;
     width: 40%;
 }
 
@@ -87,34 +92,35 @@ html,body{
 .js-toDoList li{
     margin-bottom: 10px;
     font-weight: 400;
-    font-size: 20px;
     color: white;
     font-family: 'Montserrat';
     display: flex;
     justify-content: center;
+    align-items: center;
 
 }
+.js-toDoList button{
 
-.js-toDoList span{
-    margin-left: 7px;
+    font-size: 3vmin;
+    margin-right: 7px;
+    background-color: transparent;
+    border: none;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.js-toDoList div{
     font-weight: 400;
-    font-size: 2vmin;
+    font-size: 3vmin;
     color: white;
     font-family: 'Montserrat';
 
 }
 
-.js-toDoList button{
-    font-size: 15px;
-    background-color: transparent;
-    border: none;
-    opacity: 80%;
-    padding: 3px 5px 3px 5px;
-    cursor: pointer;
-}
 
 
 .js-weather {
+    margin-top: 10px;
     padding-top: 0px;
     font-weight: 600;
     font-size: 5vmin;

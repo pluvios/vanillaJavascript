@@ -27,13 +27,13 @@ function saveToDos(){
 function paintToDo(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
-    const span = document.createElement("span");
+    const div = document.createElement("div");
     const newId = toDos.length + 1;
     delBtn.innerText = "❌";
     delBtn.addEventListener("click",deleteToDo);
-    span.innerText = text;
+    div.innerText = text;
     li.appendChild(delBtn);
-    li.appendChild(span);
+    li.appendChild(div);
     li.id = newId;
     toDoList.appendChild(li);
     
