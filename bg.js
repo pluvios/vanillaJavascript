@@ -12,8 +12,8 @@ function handleImgLoad(){
 function paintImage(imageNumber){
     const image = new Image();
     image.src = `images/${imageNumber}.jpg`;
-    body.appendChild(image);
     image.addEventListener("loadend", handleImgLoad)
+    body.appendChild(image);
     image.classList.add("bgImage")
 }
 
